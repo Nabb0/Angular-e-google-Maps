@@ -11,11 +11,19 @@ export class AppComponent {
   center : any;
   position : any;
   label :string;
+  center2 : any;
+  label2 :string;
+  circleOptions: { fillColor: string; };
   constructor()
   {
     this.center={lat: 45.506738, lng: 9.190766};
     this.position = this.center;
     this.label = "ciao";
+    this.center2={lat: 45.514089, lng: 9.190766};
+    this.position = this.center;
+    this.label2 = "..";
+    this.circleOptions = {fillColor : 'red'}
   }
+  
 
 }
