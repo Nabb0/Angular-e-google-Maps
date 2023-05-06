@@ -3,13 +3,18 @@
 <google-map [center]="center">  
   <!--Mettiamo un marker alle nostre coordinate-->
   <map-marker [position]="position" [label]="label" [title]="title">
+  
   </map-marker>
-  <map-marker [position]="position" [label]="label2" [title]="title">
-  </map-marker>
+  
 
 
   <map-circle [center]="position"
               [radius]="50"
               [options] = 'circleOptions'>
   </map-circle>
+
+<button (click)="changeColor('red')">Rosso</button>
+<button (click)="changeColor('yellow')">Giallo</button>
+<button (click)="changeColor('green')">Verde</button>
+
 </google-map>

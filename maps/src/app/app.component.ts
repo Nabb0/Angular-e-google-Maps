@@ -7,23 +7,33 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'server mappe';
-  //Aggiungiamo latitudine e longitudine di un luogo
-  center : any;
-  position : any;
-  label :string;
-  center2 : any;
-  label2 :string;
-  circleOptions: { fillColor: string; };
-  constructor()
-  {
-    this.center={lat: 45.506738, lng: 9.190766};
+  center: any;
+  position: any;
+  label: string;
+  circleOptions: { fillColor: string };
+
+  constructor() {
+    this.center = { lat: 45.506738, lng: 9.190766 };
     this.position = this.center;
     this.label = "ciao";
-    this.center2={lat: 45.514089, lng: 9.190766};
-    this.position = this.center;
-    this.label2 = "..";
-    this.circleOptions = {fillColor : 'red'}
+    this.circleOptions = { fillColor: 'red' };
   }
-  
 
-}
+  changeColor(color: string): void {
+    switch (color) {
+      case 'red':
+        this.circleOptions.fillColor = 'red';
+        break;
+      case 'yellow':
+        this.circleOptions.fillColor = 'yellow';
+        break;
+      case 'green':
+        this.circleOptions.fillColor = 'green';
+        break;
+      default:
+        this.circleOptions.fillColor = 'red';
+        break;
+    }
+    console.log(this.circleOptions);
+  }
+  }
