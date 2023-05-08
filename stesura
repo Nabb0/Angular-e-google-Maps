@@ -7,6 +7,7 @@ Crea il progetto
 Terzo passo:
 Passare alla directory del progetto 
  cd maps
+ cd maps2
 quarto passo:
 aggiungere bootstrap
  ng add @ng-bootstrap/ng-bootstrap
